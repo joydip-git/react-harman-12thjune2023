@@ -1,0 +1,10 @@
+1. create multiple product objects (at least 3/5)
+every product object should have following properties:
+name (string), id (number), price (number), imagePath (string), inStock (boolean)
+note: imagePath property stored the path for the images stored in your system for the product
+
+2. create an arry to store those product objects
+3. sort the array based on product price (ascending)
+
+
+ var p1 = { name:'', id:, price: , imagePath:'' inStock:}
