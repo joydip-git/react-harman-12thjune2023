@@ -7,3 +7,24 @@ HTML tags:
 &X; => character entities
 &lt;
 
+JavaScript:
+a. a scripting language (programming language)
+b. it is object-based language
+c. it is single threaded
+d. loosely-typed, dynamic language
+
+data types:
+string, number, boolean, object, function
+undefined, NaN, Infinity, null 
+
+
+{
+	0:10,
+	1:20,
+....
+}
+
+
+
+
+
