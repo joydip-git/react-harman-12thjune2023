@@ -20,12 +20,74 @@ undefined, NaN, Infinity, null
 operators:
 statements:
 
+functions
+
 array and it's built-in methods
+
+
 callback:
 a mechanism where a function calls back another function passed as an argument to it
 
 usage: array filtration, sorting, transformation
 real-time: logging project issues based on user choice (in db, file etc.), in asynchronous operations
+
+name-function(parameters)
+//function declaration
+function name-function([list of arguments]){
+	//logic
+	//return
+}
+name-function(parameters)
+
+//name-function(parameters)
+//function expression (classic)
+var name-function = function([list of arguments]){
+	//logic
+	//return
+}
+
+//function expression (arrow function)
+var name-function = ([list of arguments])=>{
+	//logic
+	//return
+}
+name-function(parameters)
+
+//var res = name-function(parameters)
+
+//1.
+function print(value){
+		console.log(value)
+}
+arr.forEach(print)
+
+//2.a.
+var print = function (value){
+		console.log(value)
+	}
+arr.forEach(print)
+
+
+//2.b.
+var print = (value)=>console.log(value)
+arr.forEach(print)
+
+string functions:
+includes(substring) => boolean
+	str.includes('a')
+indexOf(substring) => number
+	str.indexOf('a')
+
+str.toLocaleLowercase()
+str.toLocaleCompare(str2)
+
+object:
+	
+DOM
+	
+
+
+
 
 
 
