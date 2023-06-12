@@ -17,12 +17,17 @@ data types:
 string, number, boolean, object, function
 undefined, NaN, Infinity, null 
 
+operators:
+statements:
 
-{
-	0:10,
-	1:20,
-....
-}
+array and it's built-in methods
+callback:
+a mechanism where a function calls back another function passed as an argument to it
+
+usage: array filtration, sorting, transformation
+real-time: logging project issues based on user choice (in db, file etc.), in asynchronous operations
+
+
 
 
 

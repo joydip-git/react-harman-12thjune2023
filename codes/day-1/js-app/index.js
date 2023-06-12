@@ -26,17 +26,25 @@ function sortValues(arrData) {
     }
     return another
 }
-function transformValues(arrInfo) {
+function transformValues(arrInfo, fnRef) {
     var transformed = []
-    for (var value of arrInfo) {
-        var temp = value * 5
-        transformed.push(temp)
+    for (var element of arrInfo) {
+        var multiplied = fnRef(element)
+        transformed.push(multiplied)
     }
     return transformed
 }
 
 
 var arr = [0, 2, 3, 1, 5, 6, 4, 7, 9, 8]
+
+var sortedArray = sortValues(arr)
+
+function transform(value) {
+    return value * 5
+}
+var transformedArray = transformValues(sortedArray, transform)
+
 function isEven(num) {
     if (num % 2 === 0)
         return true
@@ -50,23 +58,7 @@ function isOdd(num) {
         return false
 }
 
-var result = filterValues(arr, isOdd)
+var result = filterValues(transformedArray, isOdd)
 for (var val of result) {
     console.log(val)
 }
-/*
-var sortedArray = sortValues(arr)
-var transformedArray = transformValues(sortedArray)
-
-function isEven(num) {
-    if (num % 2 === 0)
-        return true
-    else
-        return false
-}
-var result = filterValues(transformedArray, isEven)
-
-for (var val of result) {
-    console.log(val)
-}
-*/
