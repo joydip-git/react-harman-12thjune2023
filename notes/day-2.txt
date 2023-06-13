@@ -1,0 +1,53 @@
+ECMA
+ECMAScript - Specification
+
+ES3
+ES5
+2015 - ES6
+....
+2022 - ES2022
+
+1. Objects in JavaScript
+collection of keys and values
+
+var obj = {
+	name:'anil',
+	id:1,
+	salary:1000,
+	print: function(){ .... }
+}
+
+a. how to create objects in JS?
+	i. object literal syntax
+	ii. constructor function
+
+every object in JS world has a property __proto__, which generally refers to a base object
+a. when you call a function with new keyword, the prototype object of that function becomes the base object for the newly created object
+
+prototype object: for every function in JS, whether you call it or not, an object is created by JS engine, knwon as prototype object. This acts as base object for the objects created by calling  that function with new keyword. It is used for inheritance.
+
+every prototype object will have __proto__ property and additionally it will have 'constructor' property
+
+in JS, there is a function by the name 'Object', whose prototype object is base object for all the objects
+
+function execution context object:
+when you call a function, an execution object is created for that function
+	a. it stores reference of another object, to store local variables and their values, through the property, named, 'variableObject'
+	b. it stores reference of another object, to store 'this' data, through its property, named, 'this'
+
+function execution contex stack:
+a stack, containing execution contexts of every function, that has been called
+
+calling function:
+a. without anything prceding the function
+function foo(){}
+foo()
+by default this property will be linked to 'window' or 'global'
+
+b. with new keyword
+new foo()
+this property will be linked to a fresh new object
+
+c. with any reference
+ref.foo()
+this property wilee be bound to that refernce object
