@@ -62,3 +62,12 @@ var result = filterValues(transformedArray, isOdd)
 for (var val of result) {
     console.log(val)
 }
+
+function post(message) {
+    this.post = message
+    this.comments = []
+    this.likes = []
+}
+
+var p = new post('assadhjd')
+p.comments.push()

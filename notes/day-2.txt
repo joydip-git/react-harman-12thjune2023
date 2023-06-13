@@ -8,8 +8,10 @@ ES5
 2022 - ES2022
 
 1. Objects in JavaScript
-collection of keys and values
+a. what is an object in JS?
+	collection of keys and values
 
+exmple:
 var obj = {
 	name:'anil',
 	id:1,
@@ -17,23 +19,99 @@ var obj = {
 	print: function(){ .... }
 }
 
-a. how to create objects in JS?
+b. how to create objects in JS?
 	i. object literal syntax
+	example: 
+	var obj = {
+		name:'anil',
+		id:1,
+		salary:1000,
+		print: function(){ .... }
+	}
+
 	ii. constructor function
+	example:
+	function person(nameValue, idValue) {    
+    	this.name = nameValue
+    	this.id = idValue
+	}
+	var p = new person('anil',1)
 
+	iii. using ES6 class keyword
+	iv. using Object.create() method
+
+c. characterestics of JS objects:
+	1. can be iterated using for...in loop
+		var obj = {
+ 		   name: 'joy',
+		   id: 100
+		}
+		for (var propName in obj) {    	
+	    var propValue = obj[propName]
+   		console.log(propName+':'+propValue)
+		}
+
+	2. dynamically can be expanded
+	obj.location = 'Bangalore'
+	obj['sayHi'] = function () { console.log('hi....') }
+
+d. how to access properties of an object?
+	console.log(obj.name)
+	console.log(obj['id'])
+	console.log(obj.sayHi())
+
+details of hidden properties in an object:
 every object in JS world has a property __proto__, which generally refers to a base object
-a. when you call a function with new keyword, the prototype object of that function becomes the base object for the newly created object
 
+a. if the object is created using literal syntax(i), it will have prototype object of the Object function as its base object
+b. if the object is created using constructor function(ii), then prototype object of that constructor function will become the base object of the newly created object
+example:
+	function person(nameValue, idValue) {    
+    	this.name = nameValue
+    	this.id = idValue
+	}
+	var p = new person('anil',1)
+
+in this case the prototype object of person function is the base object for the p.
+the Object function's prototype object will be the base object of person function's prototype object 
+
+what is prototype object?
 prototype object: for every function in JS, whether you call it or not, an object is created by JS engine, knwon as prototype object. This acts as base object for the objects created by calling  that function with new keyword. It is used for inheritance.
 
+properties in prototype objects:
 every prototype object will have __proto__ property and additionally it will have 'constructor' property
 
+how do you access prototype object of a function in an application?
+a. func-name.prototype => person.prototype
+b. <obj-ref>.__proto__ => var p = new person('anil',1) p.__proto__
+
+Note:
 in JS, there is a function by the name 'Object', whose prototype object is base object for all the objects
+
+function: 
+set of instructions to do something/operation
+
+syntax:
+function func-name(args [without any data type]){
+	//code
+	//return
+}
+Note: only one value can be returned from any function
+		never metion any return type for the function
+		every function is actually a constructor function, i.e., if you call with new keyword a new object will be created (to store this data)
+function add(a,b){ return a+b //console.log(a+b)}
 
 function execution context object:
 when you call a function, an execution object is created for that function
 	a. it stores reference of another object, to store local variables and their values, through the property, named, 'variableObject'
-	b. it stores reference of another object, to store 'this' data, through its property, named, 'this'
+	b. it stores reference of another object, to store 'this' data, through its property, named, 'this' [if you use new keyword to call the function a fresh object is referred by this property of FEC, else a default object (window in case of web and global in case of node) is assigned to this property]
+	c. scope
+
+	{
+		variableObject:<ref-for-localvaruable-object>,
+		this:<ref-of-the-object-to-store-this(object)-data>
+	}
+	Note: the FEC object is destroyed along with the variable object once the function call is over
 
 function execution contex stack:
 a stack, containing execution contexts of every function, that has been called
