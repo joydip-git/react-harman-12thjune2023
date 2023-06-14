@@ -60,3 +60,19 @@ function outer(){
 
 	b. const
 	c. arrow function
+	d. class, super, constructor, extends
+
+
+6. OOP:
+	class Reader{
+		public void read();
+	}
+
+	class FileReader extends Reader{
+			@override
+			public void read(){ }
+	}
+	class DbReader extends Reader{
+			@override
+			public void read(){ }
+	}

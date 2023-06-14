@@ -1,0 +1,13 @@
+Developer:
+	name, id, basic, da, hra, incentive
+	calculateSalary(): returns the total calculate salary
+
+Hr:
+	name, id, basic, da, hra, gratuity
+	calculateSalary(): returns the total calculate salary
+
+create necessary classes for them, including base class, if any in separate JS files
+add one more JS file, where 
+	a. creates min 4 objects (2 Dev, 2 Hr)
+	b. add them in an array
+	c. iterate through the array and pick up ever object and calcualte and print their salary
