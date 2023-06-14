@@ -1,0 +1,33 @@
+1. Hoisting
+
+	JS function Code Execution cycle:
+	a. preparation stage
+	b. execution stage
+
+Preparation Stage:
+	ONLY variable and function decalartions are taken care
+	Note: this time, no function call, assignment are taken care of
+	function declarations are hoisted (function name becomes a variable which starts referring to the function)
+	function expressions are not hoisted, as the function expression consists of two parts: 	variable declaration and 
+	assignment of the function to that variable
+
+	only variable declaration is taken care of and hence the variable does not refer to the function as of now. it is undefined. 
+	Note: do not call the function before the expression. you can call any function before declaration
+
+Execution stage:
+	this time, function call, assignment are taken care of
+
+2. scopes:
+	every function has access to its outer scope variable
+	Note: outer function do not have access to inner scopes
+
+3. closure:
+	JS engine creates and maintains the state of all the outer scopes for an inner function, though all the outer functions and their scopes might be over by the time inner function is invoked. the lexical environment for a inner function and its state is known as closure.
+
+
+3. New Features in ES:
+	a. let: creates scope for a variable inside a function
+				a variable with same name decalared inside statemenets and outside (inside the same function) with let keyword are treated separately
+	Note: do not try to access a variable declared with let keyword before the declaration
+
+	b. 
