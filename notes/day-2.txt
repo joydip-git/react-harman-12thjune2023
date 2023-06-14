@@ -116,16 +116,4 @@ when you call a function, an execution object is created for that function
 function execution contex stack:
 a stack, containing execution contexts of every function, that has been called
 
-calling function:
-a. without anything prceding the function
-function foo(){}
-foo()
-by default this property will be linked to 'window' or 'global'
 
-b. with new keyword
-new foo()
-this property will be linked to a fresh new object
-
-c. with any reference
-ref.foo()
-this property wilee be bound to that refernce object

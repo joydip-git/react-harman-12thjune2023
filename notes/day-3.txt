@@ -24,10 +24,39 @@ Execution stage:
 3. closure:
 	JS engine creates and maintains the state of all the outer scopes for an inner function, though all the outer functions and their scopes might be over by the time inner function is invoked. the lexical environment for a inner function and its state is known as closure.
 
+4. this binding:
 
-3. New Features in ES:
+calling function:
+a. without anything prceding the function
+function foo(){}
+foo()
+by default THIS property will be linked to 'window' or 'global'
+
+b. with new keyword
+new foo()
+this property will be linked to a fresh new object
+
+c. with any reference
+ref.foo()
+this property wilee be bound to that refernce object
+
+if you want to get an inner function to be bound to the same THIS object as that of the outer function, you can use any of the following:
+a. call bind() method on the inner function and pass the reference of the outer THIS object as argument
+
+function outer(){
+	const inner=function(){}
+	inner = inner.bind(this)
+}
+
+b. write the inner function using arow function
+function outer(){
+	const inner=()=>{}
+}
+
+5. New Features in ES:
 	a. let: creates scope for a variable inside a function
 				a variable with same name decalared inside statemenets and outside (inside the same function) with let keyword are treated separately
 	Note: do not try to access a variable declared with let keyword before the declaration
 
-	b. 
+	b. const
+	c. arrow function
