@@ -110,12 +110,17 @@ b. module formats
 c. module loader: a s/w which understands a module format and accordingly resolves the dependencies amongst files and load the modules
 
 	1. common js module loader
-	2. requirejs module loader
+	2. requirejs module loader: it understands ONLY AMD format
+		install: >npm i requirejs
 
 transpilation:
 a. new version of JS code to vanilla JS code: babel
 b. Other script code to JS code
 	example: TS => JS (tsc)
+
+Note: Browser DO NOT HAVE ANY MODULE LOADER software, unlike Node JS
+You need to supply a module loader s/w to browser
+
 
 
 

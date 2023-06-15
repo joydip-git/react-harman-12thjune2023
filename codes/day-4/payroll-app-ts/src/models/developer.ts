@@ -1,4 +1,6 @@
-class Developer extends Employee {
+import { Employee } from "./employee";
+
+export class Developer extends Employee {
     constructor(public name: string, public id: number, public basicPay, public daPay: number, public hraPay: number, public incentivePay: number) {
         super(name, id, basicPay, daPay, hraPay)
     }

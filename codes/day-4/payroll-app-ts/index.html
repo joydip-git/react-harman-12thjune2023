@@ -5,14 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll App</title>
-    <script src="./dist/models/employee.js"></script>
+    <!-- <script src="./dist/models/employee.js"></script>
     <script src="./dist/models/developer.js"></script>
-    <script src="./dist/models/hr.js"></script>
-    <script src="./dist/index.js"></script>
+    <script src="./dist/models/hr.js"></script> -->
+    <script src="./node_modules/requirejs/require.js" data-main="./dist/index.js"></script>
 </head>
 
 <body>
-
+    <fieldset>
+        <legend>Choose an Employee:</legend>
+        <label for="radioDeveloper">Developer&nbsp;</label>
+        <input type="radio" id="radioDeveloper" name="empGroup" checked>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="radioHr">Hr&nbsp;</label>
+        <input type="radio" id="radioHr" name="empGroup">
+    </fieldset>
+    <div>
+        <div>
+            <label for="txtId">Id:&nbsp;</label>
+            <input type="number" id="txtId">
+        </div>
+        <div>
+            <label for="txtName">Name:&nbsp;</label>
+            <input type="text" id="txtName">
+        </div>
+        <div>
+            <label for="txtBasic">Basic:&nbsp;</label>
+            <input type="text" id="txtBasic">
+        </div>
+        <div>
+            <label for="txtDa">Da:&nbsp;</label>
+            <input type="text" id="txtDa">
+        </div>
+        <div>
+            <label for="txtHra">Hra:&nbsp;</label>
+            <input type="text" id="txtHra">
+        </div>
+        <div>
+            <label for="txtExtra">Incentive:&nbsp;</label>
+            <input type="text" id="txtExtra">
+        </div>
+        <div>
+            <input type="button" value="Add Record" id="btnAdd">
+        </div>
+    </div>
 </body>
 
 </html>
