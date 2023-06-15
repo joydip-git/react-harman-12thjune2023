@@ -1,2 +1,3 @@
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 https://medium.com/@happymishra66/execution-context-in-javascript-319dd72e8e2c
+https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/
