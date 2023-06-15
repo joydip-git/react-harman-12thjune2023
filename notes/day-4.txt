@@ -1,0 +1,92 @@
+TypeScript:
+1. super set of JS
+2. is development ONLY language
+3. provides static type checking and type annotation (strict data typing)
+4. it has all the new features of ES
+5. at the top of that it provides many extra features, data types etc. also
+	Note: all those extra features are never transpiled to JS
+6. you need a tool to transpile TS code back to JS code: typescript transpiler (executable - tsc)
+
+extra fetaures:
+a. data type: any, unknown, partial etc.
+b. class:
+	access specifiers for data and functionalities
+c. interface
+d. custom data type using 'type' keyword and creating data type for functions
+e. generic types can be declared in TS
+
+type inference:
+understanding the type of variable/identifier from assigned value
+
+
+configuration of JS application:
+done through a JSON file: package.json
+this file should always be there at the root of the application directory
+can be created manually or using NPM tool
+>npm init
+or
+>npm init --yes
+
+install typescript transpiler:
+>npm i typescript --save-dev [dev dependency]
+>npm i package-name --save [complete dependency]
+
+or
+
+>npm i typescript -D [dev dependency]
+>npm i package-name [complete dependency]
+
+audit packages:
+>npm audit
+
+fix issues:
+>npm audit fix --force
+
+package managers:
+a. NPM: Node Packager Manager
+folder for packages => node_mdoules
+
+
+b. yarn: folder for packages => node_mdoules
+
+c. bower: folder for packages => bower_components
+
+creating typescript config file:
+>.\node_modules\.bin\tsc --init
+
+TS/JS-based Application development:
+
+A. Development mode:
+
+a. preparation:
+1. create application folder
+2. create package.json file (using npm command)
+3. install necesary packages
+4. create a directory for your source code
+5. create an HTML file at the root of your application directory
+6. configure some extrnal tools if required
+
+b. coding:
+complete coding. always have a main file (like index.js/ts).
+
+c. post-coding:
+1. transpile your code
+2. bundle your code
+3. link the transpiled files to HTML
+4. host your application through an application development server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
