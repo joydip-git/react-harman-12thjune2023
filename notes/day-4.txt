@@ -77,6 +77,46 @@ c. post-coding:
 4. host your application through an application development server
 
 
+Modules in JS/TS:
+a. modules
+	it is an API, which can be used to export some members out of a file
+	a single JS/TS file is considered as a module
+
+b. module formats
+	1. common js format (default module format for Node JS)
+		file1:
+		const x = 10
+		module.exports={x}
+		file2:
+		const fsExports = require('<file-path-sans-extension>')
+		fsExports.x
+
+		const {x}= require('<file-path-sans-extension>')
+		clg(x)
+
+	2. ES6 module format
+		file1:
+		export const x = 10
+		file2:
+		import {x} from '<file-path-sans-extension>'
+
+	3. Asynchronous Module Definition (AMD) Format
+		define([]){}
+	4. Universal Module Definition (UMD) Format
+		require([]){}
+
+	5. systemjs module format
+
+c. module loader: a s/w which understands a module format and accordingly resolves the dependencies amongst files and load the modules
+
+	1. common js module loader
+	2. requirejs module loader
+
+transpilation:
+a. new version of JS code to vanilla JS code: babel
+b. Other script code to JS code
+	example: TS => JS (tsc)
+
 
 
 
