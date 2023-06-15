@@ -65,6 +65,7 @@ a. preparation:
 4. create a directory for your source code
 5. create an HTML file at the root of your application directory
 6. configure some extrnal tools if required
+7. write scripts if necessary
 
 b. coding:
 complete coding. always have a main file (like index.js/ts).
