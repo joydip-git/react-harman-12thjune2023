@@ -9,6 +9,8 @@
     ],
     "module": "AMD",
     "sourceMap": true,
-    "strict": true
+    "strict": true,
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true
   }
 }

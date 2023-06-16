@@ -1,0 +1,17 @@
+backend RESTful API server: json-server
+
+using axios for making HTTP requests:
+
+installation (in case of TS application)
+>npm i axios (complete dependency)
+>npm i @types/axios -D (in case of TS application, otherwise ommit)
+
+add two properties in tsconfig.json file:
+"esModuleInterop":true
+"moduleResolution":"nodenext"
+
+restart the tsc
+
+base url:
+http://localhost:3000/employees 		GET	NA		an array of employee records
+http://localhost:3000/employees/1 		GET	id		an employee record

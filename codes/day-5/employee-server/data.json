@@ -1,0 +1,20 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "anil",
+      "basicPay": 1000,
+      "daPay": 2000,
+      "hraPay": 3000,
+      "incentivePay": 4000
+    },
+    {
+      "id": 2,
+      "name": "sunil",
+      "basicPay": 2000,
+      "daPay": 3000,
+      "hraPay": 4000,
+      "gratuityPay": 5000
+    }
+  ]
+}

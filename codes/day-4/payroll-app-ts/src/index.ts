@@ -1,6 +1,7 @@
 import { Developer } from "./models/developer";
 import { Employee } from "./models/employee";
 import { Hr } from "./models/hr";
+import axios from "axios";
 
 const people: Employee[] = []
 
@@ -32,8 +33,10 @@ function save() {
     }
 
     if (employee) {
-        people.push(employee)
-        console.log(people)
+        // people.push(employee)
+        // console.log(people)
+        // fetch('')
+        // axios.post('', employee)
     }
 }
 
@@ -60,6 +63,16 @@ radioHr.addEventListener(
         extraLabelObject.innerText = 'Gratuity'
     }
 )
+
+//export const x = 10
+//import {x} from ''
+
+// const x = 10
+// export default x
+// export const y=20
+
+// import a from ''
+// import {y } from ''
 
 
 

@@ -1,0 +1,36 @@
+GET http://localhost:3000/employees
+
+###
+GET http://localhost:3000/employees/1
+
+###
+POST http://localhost:3000/employees
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "joydip",
+    "basicPay": 1000,
+    "daPay": 2000,
+    "hraPay": 3000,
+    "incentivePay": 4000
+}
+
+###
+PUT http://localhost:3000/employees/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "joydip",
+    "basicPay": 15000,
+    "daPay": 2300,
+    "hraPay": 3300,
+    "incentivePay": 4200
+}
+
+###
+DELETE http://localhost:3000/employees/3
+
+###
+GET http://localhost:3000/employees/3
