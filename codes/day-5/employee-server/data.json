@@ -23,6 +23,22 @@
       "daPay": 2000,
       "hraPay": 1100,
       "incentivePay": 2100
+    },
+    {
+      "name": "suresh",
+      "id": 4,
+      "basicPay": 11000,
+      "daPay": 21000,
+      "hraPay": 31000,
+      "incentivePay": 41000
+    },
+    {
+      "name": "abcd",
+      "id": 5,
+      "basicPay": 1,
+      "daPay": 1,
+      "hraPay": 1,
+      "incentivePay": 1
     }
   ]
 }

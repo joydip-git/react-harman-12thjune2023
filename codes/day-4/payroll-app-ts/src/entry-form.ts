@@ -47,6 +47,7 @@ async function save() {
             )
             if (res.status === 201) {
                 window.alert('added successfully')
+                window.location.href = '../records.html'
             } else {
                 window.alert('some issue')
             }
