@@ -1,3 +1,9 @@
+import { Developer } from "./models/developer";
+import { Employee } from "./models/employee";
+import { Hr } from "./models/hr";
+
+const people: Employee[] = []
+
 function save() {
     const idInput = <HTMLInputElement>document.getElementById('txtId');
     const id = Number(idInput.value)
@@ -17,21 +23,45 @@ function save() {
     const extraInput = <HTMLInputElement>document.getElementById('txtExtra');
     const extra = Number(extraInput.value)
 
-    const radioDev = <HTMLInputElement>document.getElementById('radioDeveloper');
-
-    const radioHr = <HTMLInputElement>document.getElementById('radioHr');
-
+    let employee: Employee | undefined = undefined;
     if (radioDev.checked) {
-
+        employee = new Developer(name, id, basic, da, hra, extra)
     }
     if (radioHr.checked) {
-
+        employee = new Hr(name, id, basic, da, hra, extra);
     }
 
+    if (employee) {
+        people.push(employee)
+        console.log(people)
+    }
 }
 
 const btnObjct = document.getElementById('btnAdd');
-btnObjct.addEventListener(
+btnObjct?.addEventListener(
     'click',
     save
 )
+
+const extraLabelObject = <HTMLLabelElement>document.getElementById('lblExtra')
+
+const radioDev = <HTMLInputElement>document.getElementById('radioDeveloper');
+radioDev.addEventListener(
+    'change',
+    function () {
+        extraLabelObject.innerText = 'Incentive'
+    }
+)
+
+const radioHr = <HTMLInputElement>document.getElementById('radioHr');
+radioHr.addEventListener(
+    'change',
+    function () {
+        extraLabelObject.innerText = 'Gratuity'
+    }
+)
+
+
+
+
+
