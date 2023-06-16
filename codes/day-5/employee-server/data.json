@@ -15,6 +15,14 @@
       "daPay": 3000,
       "hraPay": 4000,
       "gratuityPay": 5000
+    },
+    {
+      "name": "joydip",
+      "id": 3,
+      "basicPay": 1000,
+      "daPay": 2000,
+      "hraPay": 1100,
+      "incentivePay": 2100
     }
   ]
 }

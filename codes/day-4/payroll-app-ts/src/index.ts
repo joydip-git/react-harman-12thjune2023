@@ -1,11 +1,11 @@
 import { Developer } from "./models/developer";
 import { Employee } from "./models/employee";
 import { Hr } from "./models/hr";
-import axios from "axios";
+//import axios from "axios";
 
 const people: Employee[] = []
 
-function save() {
+async function save() {
     const idInput = <HTMLInputElement>document.getElementById('txtId');
     const id = Number(idInput.value)
 
@@ -31,12 +31,29 @@ function save() {
     if (radioHr.checked) {
         employee = new Hr(name, id, basic, da, hra, extra);
     }
-
-    if (employee) {
-        // people.push(employee)
-        // console.log(people)
-        // fetch('')
-        // axios.post('', employee)
+    // people.push(employee)
+    // console.log(people)   
+    try {
+        if (employee) {
+            const res = await fetch(
+                'http://localhost:3000/employees',
+                {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(employee)
+                }
+            )
+            if (res.status === 201) {
+                window.alert('added successfully')
+            } else {
+                window.alert('some issue')
+            }
+        }
+    }
+    catch (e: any) {
+        console.log(e.message)
     }
 }
 
@@ -73,6 +90,18 @@ radioHr.addEventListener(
 
 // import a from ''
 // import {y } from ''
+
+// fetch('')
+            // const res = await axios
+            //     .post(
+            //         'http://localhost:3000/employees',
+            //         employee,
+            //         {
+            //             headers: {
+            //                 "Content-Type": "application/json"
+            //             }
+            //         }
+            //     )
 
 
 
