@@ -45,6 +45,22 @@ or using package runner:
 
 >npx create-react-app first-react-app
 
+1. creating a component
+2. How to pass data and function through properties/attributes from parent to nested component
+3. Children property of ReactElement
+<Welcome messageValue={message} data={10} callFn={callMe}>
+	<p>....</p>
+	<br/>
+	<div>.....</div>
+</Welcome>
+
+const Welcome=(props:WelcomePropType)=>{
+	return props.children
+}
+4. how to pass data from nested to parent component:
+	a. from parent, first pass an function to the nested
+	b. let the nested component call it and pass any data
+
 
 
 
