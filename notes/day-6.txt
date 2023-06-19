@@ -1,0 +1,63 @@
+1. package.json
+2. installed packages:
+	a. react and react-dom (React JS packages, complete dependency)
+	b. @babel/core, @babel/cli (Babel compiler packages, development dependency)
+	c. @babel/preset-env (ES6+ syntax transformer plugins related preset package, development dependency)
+	d. @babel/plugin-transform-modules-amd (module transformer lugin, development dependency)
+	e. @babel/preset-react (JSX syntax transformer plugins related preset package, development dependency)
+	f. requirejs (module loader)
+	
+3. babel configuration: created .babelrc file and placed the configuration
+4. completed code:
+		a. created components including root component using JSX syntax
+		b. used render() method to translate the VDOM into ADOM
+5. created HTML file and linked a module loader (requirejs) and root JS file from dist folder
+
+dvelopment-mode/production-mode:
+a. compile code 
+
+production-mode: 
+b. minifying/compressing
+c. bundling
+d. code splitting: bundle of the application is split into several chunks
+
+tools: webpack, browserify etc.
+
+React JS:
+1. client side, SPA 
+2. js library to create front-end application
+3. uses component-based architecture
+4. it is unoppinionated
+
+SEO
+
+Frameworks:
+Vercel - Next JS
+Gatsby etc.
+
+tool:
+create-react-app 
+install:
+a. >npm i create-react-app -g
+b. create-react-app first-react-app
+
+or using package runner:
+
+>npx create-react-app first-react-app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+import { render } from "react-dom";
+import React from 'react'
+import App from "./App";
+
+// const appDesign = App()
+const root = document.getElementById('root')
+
+// root.appendChild(appDesign)
+//render(appDesign, root)
+render(<App />, root)

@@ -1,0 +1,25 @@
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { createElement } from "react";
+
+const App = () => {
+    // const header = Header()
+    // const footer = Footer()
+
+    //template
+    // const div = document.createElement('div')
+    // div.append(header, footer)
+
+    // const div = createElement('div', {}, [header, footer])
+    const div = (
+        <div>
+            {/* {header} */}
+            <Header />
+            <br />
+            {/* {footer} */}
+            <Footer />
+        </div>
+    )
+    return div
+}
+export default App

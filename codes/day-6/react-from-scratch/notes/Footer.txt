@@ -1,0 +1,20 @@
+//import { createElement } from "react"
+import React from "react";
+
+export function Footer() {
+    //code
+    const footerMessage = "Herman Miller, 2023"
+
+    //template
+    // const footerElement = document.createElement('footer')
+    // footerElement.innerHTML = `&copy; ${footerMessage}`
+
+    // const footerElement = createElement(
+    //     'footer',
+    //     {},
+    //     `&copy;${footerMessage}`
+    // )
+
+    const footerElement = <footer>&copy;{footerMessage}</footer>
+    return footerElement
+}

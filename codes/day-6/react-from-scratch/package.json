@@ -1,0 +1,24 @@
+{
+  "name": "react-from-scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel src --out-dir dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-transform-modules-amd": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "requirejs": "^2.3.6"
+  }
+}

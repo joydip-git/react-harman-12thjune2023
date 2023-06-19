@@ -1,0 +1,34 @@
+//import { createElement } from 'react'
+import React from 'react'
+
+export function Header() {
+    //code
+    const message = 'Welcome to React JS'
+    const changeMessage = (e) => {
+        e.target.innerText = 'Welcome to React JS from Scratch'
+    }
+
+    //template/view/design
+    // const headerElement = document.createElement('h2')
+    // headerElement.innerText = message
+    // headerElement.addEventListener('mouseover', changeMessage)
+
+    // const headerElement = createElement(
+    //     'h2',
+    //     {
+    //         id: 'mainHeader',
+    //         onMouseOver: changeMessage
+    //     },
+    //     message
+    // )
+    const headerElement = (
+        <h2 id='mainHeader' onMouseOver={changeMessage}>
+            <span>
+                {message}
+            </span>
+        </h2>
+
+    )
+
+    return headerElement
+}
