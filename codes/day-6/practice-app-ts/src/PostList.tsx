@@ -3,7 +3,8 @@ import { Post } from './post'
 import PostRow from './PostRow'
 
 type PostListPropType = {
-    records: Post[]
+    records: Post[],
+    deleteFn: (x: number) => void
 }
 
 const PostList = (props: PostListPropType) => {
@@ -17,6 +18,7 @@ const PostList = (props: PostListPropType) => {
                     <th>User Id</th>
                     <th>Title</th>
                     <th>Body</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +28,7 @@ const PostList = (props: PostListPropType) => {
                             return (
                                 <PostRow
                                     postData={p}
-                                    key={p.id} />
+                                    key={p.id} deleteFnRef={props.deleteFn} />
                             )
                         }
                     )

@@ -2,15 +2,21 @@ import React from 'react'
 import { Post } from './post'
 
 type PostRowPropType = {
-    postData: Post
+    postData: Post,
+    deleteFnRef: (x: number) => void
 }
-const PostRow = ({ postData }: PostRowPropType) => {
+const PostRow = (args: PostRowPropType) => {
     return (
         <tr>
-            <td>{postData.id}</td>
-            <td>{postData.userId}</td>
-            <td>{postData.title}</td>
-            <td>{postData.body}</td>
+            <td>{args.postData.id}</td>
+            <td>{args.postData.userId}</td>
+            <td>{args.postData.title}</td>
+            <td>{args.postData.body}</td>
+            <td>
+                <button type="button" onClick={
+                    () => { args.deleteFnRef(args.postData.id) }
+                }>Delete</button>
+            </td>
         </tr>
     )
 }

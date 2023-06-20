@@ -1,0 +1,14 @@
+State in React JS:
+a. through class component:
+	class components inherits from base class Component
+	class Parent extends Component{}
+	this base class gives you a property 'state'
+	assign an object to it. i.e., state property is of type object (always)
+	every piece of data to be stored in the state, has to be stored in that object using some property name
+	in order to update the state data, use 'setState()' method of Component base class
+	to the setState method pass an object as an argument (new state). the object should have the property whose value needs to be updated. any other property will remain unchanged when the state is updated.
+	the setState method updates the state asynchronously, without blocking the main thread. thus the UI does not get disturbed
+	once the state has been updated, React engine will call render() method of the existing class component object. that will create next version of JSX elements (new VDOM). this new version of VDOM will update the actual DOM , which was created initially.
+	NEVER EVER MUTATE THE STATE DIRECTLY, ALWAYS USE setState method
+	
+b. through useState() hook:
