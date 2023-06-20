@@ -1,4 +1,5 @@
 import './App.css';
+import PostList from './PostList';
 import { Post } from './post';
 
 function App() {
@@ -28,9 +29,12 @@ function App() {
   }]
   return (
     <div className="App">
-
+      <PostList records={posts} />
     </div>
   );
 }
 
 export default App;
+/**
+ * property object => {records:[{},{},....]}
+ */
