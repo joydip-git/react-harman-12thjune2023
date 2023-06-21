@@ -9,6 +9,8 @@ type ParentPropType = {
 type ParentStateType = {
     posts: Post[]
 }
+//in case there is no state and prop type
+//class Parent extends Component<{}, {}> 
 class Parent extends Component<ParentPropType, ParentStateType> {
     state: Readonly<ParentStateType> = {
         posts: records
