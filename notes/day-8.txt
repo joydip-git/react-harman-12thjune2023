@@ -14,3 +14,30 @@ create-react-app tool:
 1. client-side data fetching
 2. no request goes to the server (Deployment) after initial request
 3. PWA: caching, push notifictaion etc.
+
+
+component lifecycle (class component):
+a. mounting => 
+	1. component object creation (constructor of the class gets called)
+	2. render() method of the component object is called (creates the VDOM)
+	3. the VDOM gets translated to ADOM by the code in index.tsx file
+	4. at the end of his 'mounting' phase, an event 'componentDidMount' gets fired from component class object
+	you can handle the event by writing the following method in the class component:
+	componentDidMount: Called immediately after a component is mounted. Setting state here will trigger re-rendering.
+
+b. updation:
+	1. somehow, the state of the component got updated or the class component received fresh property object
+	2. render() method of the component object is called (creates the VDOM) once again
+	3. the VDOM now is going to JUST update the existing ADOM, created initially
+
+c. destruction phase:
+	the object of the class component will be destroyed
+	at that point of time, an event, named, componentWillUnmount be fired
+	you can handle that event by writing a method componentWillUnmount() in the class component
+	
+
+rendering (VDOM) vs mounting (translating the VDOM to ADOM very first time)
+
+
+
+
