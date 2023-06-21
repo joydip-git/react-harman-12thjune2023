@@ -1,0 +1,16 @@
+1. use tool to transpile your code [transpiler - tsc or babel]
+	a. all TS codes to JS (older version)
+	b. React JSX syntax to JS
+	c. module format from ES6 to something else (AMD)
+	
+webpack, browserify (tools)
+Next JS, Gatsby (frameworks)
+2. use tool to minify (compress your code)
+3. use tool to create bundle (JS bundle, CSS bundle, 3rd party s/w bundle, etc.)
+4. use tool for splitting those bundle into reusable pieces, known as chunks (code splitting)
+5. deploy the application
+
+create-react-app tool:
+1. client-side data fetching
+2. no request goes to the server (Deployment) after initial request
+3. PWA: caching, push notifictaion etc.
