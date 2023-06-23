@@ -1,0 +1,13 @@
+1. Routing:
+
+localhost:3000 =>      		  		Home
+localhost:3000/home => 		  		Home
+localhost:3000/products =>    		ProductList
+localhost:3000/products/view/1 =>   ViewProduct
+localhost:3000/products/edit/1 =>   EditProduct
+localhost:3000/products/add =>  	AddProduct
+
+Route: path and component
+
+Router: engine who can read URL (routes) from and write to the browser address bar as well as redirect you to that route
+

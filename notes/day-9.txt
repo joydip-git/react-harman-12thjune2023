@@ -1,0 +1,111 @@
+1. React JS:
+	a. client-side fornt-end development JS library
+	b. used to create an web application based on component-based architecture
+	c. basically works with Virtual DOM which renders the ADOM and incrementally updates it
+	
+2. Features:
+	a. components: functional and class component
+	b. passing data between components: property object
+	c. to maintain state of data in components:
+		- in class component, using 'state' property
+		- in functiona component, using useState() hook
+	d. to maintain lifecycle of components:
+		- in class component, use lifecycle hooks or methods, such as
+			 - componentDidMount()
+			 - componentWillUnmount()
+			 - componentDidiUpdate()
+			 - shouldComponentUpdate()
+			 
+		- in functiona component, use useEffect() hook
+	e. to maintain state of data across application, use useReducer() hook
+	f. maintain state of form data in components
+	g. provides you facility to interact with ADOM elements too, using different techniques, such as
+		- using callback ref method
+		- using createRef() method
+		- using useRef() hook
+	h. sharing data across component using context object
+	i. sharing data across component using context object using rxjs
+	
+
+Hooks:
+	useful APIs provided by React library
+	Note: the hooks should be called from within a functional component or another hook. DO NOT USE HOOKS IN CLASS COMPONENT or from any REGULAR FUNCTION.
+	
+a. useState() or State Hook:
+	i. to maintain state/states for a functional component
+	ii. the function, when called, will create a state for that component, where you can store any type of data
+	iii. the state created, is not an object (unlike class component)
+	
+
+b. effect hook or useEffect()
+	a. used for executing side-effect causing code (known as Effect)
+	b. the code will be executed always after render
+	c. the effect is registered first with React when you call useEffect() and pass an effect as an argument
+	d. the effect can be executed conditionally also, by using dependency list as the second argument to the arry (dependency list)
+		- if a blank array is passed, then the effect will be executed only the very first time the component is rendered
+		useEffect(
+		() => {
+			console.log('nested first effect only one time...ther very first time')
+
+			return () => {
+			console.log('cleanup only  one time...when the component is unmounted')
+			}
+		},
+		[]
+		)
+		- if an array with values (dependencies) is passed as the 2nd argument, then the effect will be executed only when value of any dependency in the array changes
+		useEffect(
+		() => {
+		console.log('nested first effect only when numdata changes')
+
+		return () => {
+			console.log('cleanup only when numdata changes')
+		}
+		},
+		[props.numData]
+		)
+	
+		- if no dependencies passed, then the effect will be executed everytime the component is rendered (after render)
+		useEffect(
+			() => {
+			console.log('nested first effect always')
+
+			return () => {
+				console.log('cleanup always')
+			}
+			}
+		)
+	e. additionally the effects can return callbacks, which will be executed in the next cycle, first, before everything else. this callback can be used for clean up operation
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

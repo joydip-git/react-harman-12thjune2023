@@ -1,0 +1,13 @@
+// const arr = useState<Todo[]>([])
+    // const todoState = arr[0]
+    // const setTodoState = arr[1]
+    const numbers = [1, 2, 3, 4]
+    // const f = numbers[1]
+    // const l = numbers[numbers.length - 1]
+    const [, f, , l] = numbers
+    console.log(f, l)
+
+    const obj = { name: 'anil', id: 1, salary: 1000 }
+    // const n = obj.name
+    // const s = obj.salary
+    const { name:n, salary:s} = obj
