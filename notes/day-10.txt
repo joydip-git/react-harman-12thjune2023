@@ -2,12 +2,53 @@
 
 localhost:3000 =>      		  		Home
 localhost:3000/home => 		  		Home
-localhost:3000/products =>    		ProductList
-localhost:3000/products/view/1 =>   ViewProduct
-localhost:3000/products/edit/1 =>   EditProduct
+localhost:3000/products =>    		ProductList [ProductRow + FilterProduct]
+localhost:3000/products/view/:id =>   ViewProduct
+localhost:3000/products/edit/:id =>   EditProduct
 localhost:3000/products/add =>  	AddProduct
+
+localhost:3000/<invalid-path> =>    PageNotFound
 
 Route: path and component
 
 Router: engine who can read URL (routes) from and write to the browser address bar as well as redirect you to that route
+a. BrowserRouter
+b. HashRouter
+c. MemoryRouter
+
+
+Next JS:
+	app
+		page.tsx (root file)
+		
+		- products (folder)
+			page.tsx (root file => ProductList)
+			
+			- add (folder)
+				page.tsx (root file => AddProduct)
+			- edit
+				page.tsx (root file => EditProduct)
+			- viewproduct
+				- [route-parameter-name]
+					page.tsx (root file => ViewProduct)
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
 
