@@ -2,8 +2,8 @@
 
 localhost:3000 =>      		  		Home
 localhost:3000/home => 		  		Home
-localhost:3000/products =>    		ProductList [ProductRow + FilterProduct]
-localhost:3000/products/view/:id =>   ViewProduct
+localhost:3000/products =>    		ProductList [ProductTable(ProductRow) + FilterProduct]
+localhost:3000/products/view/:id =>   ViewProduct {'id':'3'} <= params
 localhost:3000/products/edit/:id =>   EditProduct
 localhost:3000/products/add =>  	AddProduct
 
@@ -16,26 +16,44 @@ a. BrowserRouter
 b. HashRouter
 c. MemoryRouter
 
-
 Next JS:
 	app
-		page.tsx (root file)
+		index.tsx (root file) => index.js	(Home)
 		
 		- products (folder)
-			page.tsx (root file => ProductList)
+			index.tsx (root file => ProductList) => products.js (ProductList)
 			
 			- add (folder)
-				page.tsx (root file => AddProduct)
+				index.tsx (root file => AddProduct) => add.js (AddProduct)
 			- edit
-				page.tsx (root file => EditProduct)
+				- [route-parameter-name]
+					index.tsx (root file => EditProduct) => id.js (EditProduct)
 			- viewproduct
 				- [route-parameter-name]
-					page.tsx (root file => ViewProduct)
+					index.tsx (root file => ViewProduct) => id.js (ViewProduct)
 			
 	
 	
 	
+	display all products:
+		component: ProductList [products>index.tsx=>products.js]
+			client => products.js
+			server => products.html + products.json
+		component: ViewProduct [products/viewproduct/[id]/index.tsx => id.js]
+			client: id.js 
+			server: id.html + id.json
+
+1. Client-side rendering:
+2. Pre-Rendering:			
+	a. Static Site Generation (SSG): this creates HTML file/JS chunks and JSON files (for data) before any request has come from any client
 	
+	b. Server side rendering: based on request, dynamically Next JS (Which is still running at server side) generates some html/js chunk/json files
+	
+Data Fetching:
+	client-side data fetching
+	pre-fetching
+
+
 	
 	
 	
